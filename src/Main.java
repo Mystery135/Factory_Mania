@@ -6,10 +6,16 @@ Version: 0.1
 Alpha Release: 2021-10-10
  */
 
-public class main {
+
+
+public class Main {
 
 
     public static void main(String[] args){
+
+
+        new Launcher();
+
 
 Factory1 factory1 = new Factory1();
 

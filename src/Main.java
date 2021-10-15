@@ -19,24 +19,9 @@ public class Main {
 
 Factory1 factory1 = new Factory1();
 
-boolean started = false;
-
-while(!started){
 
 
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Start game? (Type 'yes' Or 'Yes' To Start)");
-    String a = scan.nextLine();
-    if (a.equals("yes") || a.equals("Yes")){
-        started = true;
-        System.out.println("Type 'how much money', 'How much money', or 'bal' to see your money");
 
-        factory1.work();
-
-
-    }
-
-}
 
 
 

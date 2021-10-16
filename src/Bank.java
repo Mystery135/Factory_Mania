@@ -1,5 +1,5 @@
 public class Bank {
-    private static double money;
+    private static double money = 10000;
     public double getMoney(){
         return money;
 

@@ -24,7 +24,7 @@ private static JLabel balance;
         ///////////////////////////////////////////////////////////////
         //dollarpersecond
         ///////////////////////////////////////////////////////////////
-        dollarpersecond = new JLabel("$ per second:"+ factory1.getMoneyearned());
+        dollarpersecond = new JLabel("$ per payout period:"+ factory1.getMoneyearned());
         dollarpersecond.setBounds(565,100,800,25);
         ///////////////////////////////////////////////////////////////
         //payoutperiod
@@ -100,7 +100,7 @@ Timer timer = new java.util.Timer();
             @Override
             public void run() {
 balance.setText("Balance:" + (int)bank.getMoney() );
-dollarpersecond.setText("$ per second:"+ factory1.getMoneyearned());
+dollarpersecond.setText("$ per payout period:"+ factory1.getMoneyearned());
 if (factory1.getPeriod()>0){
 
     payoutperiod.setText("Payout period:" + factory1.getPeriod() + "ms");

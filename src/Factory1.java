@@ -7,6 +7,7 @@ public class Factory1 extends Factory{
 private static double moneyearned = 1;
 private static int delay = 1000;//doesnt matter
     private static int period = 1000;
+    private static int periodPrice =10;
 
 
 
@@ -93,6 +94,21 @@ changedperiodtimer.scheduleAtFixedRate(changedperiodtimertask, 1, 1);
     public void setPeriod(int period) {
         this.period = period;
     }
+
+    public int getPeriodPrice(){
+
+        return periodPrice;
+
+
+    }
+    public void setPeriodPrice(int periodPrice){
+        this.periodPrice = periodPrice;
+
+
+
+
+    }
+
 
 
 }

@@ -73,13 +73,14 @@ String input = scan.nextLine();
 
 ActionDone = true;
 
-                if(bank.getMoney() >= 1010 - factory1.getPeriod()) {
+                if(bank.getMoney() >= factory1.getPeriodPrice()) {
 
 factory1.setPeriod(factory1.getPeriod()-50);
-System.out.println("Payout period is now " + factory1.getPeriod() + " milliseconds from " + (factory1.getPeriod() +50) + " milliseconds");
-bank.setMoney(bank.getMoney() - (960-factory1.getPeriod()));
-System.out.println("Your balance is now " + bank.getMoney());
 
+System.out.println("Payout period is now " + factory1.getPeriod() + " milliseconds from " + (factory1.getPeriod() +50) + " milliseconds");
+bank.setMoney(bank.getMoney() - (factory1.getPeriodPrice()));
+System.out.println("Your balance is now " + bank.getMoney());
+                    factory1.setPeriodPrice((int) (factory1.getPeriodPrice()*1.4));
 
                 }
 

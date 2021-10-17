@@ -8,15 +8,22 @@ public class Game_Window {
     JFrame frame = new JFrame("Factory Mania");
     JPanel panel = new JPanel();
      public static JLabel labelforupgradedollar;
+    public static JLabel labelforupgradems;
 private static JLabel balance;
-    private static JButton upgradedollar;
-    private static JButton upgradems;
+    public static JButton upgradedollar;
+    public static JButton upgradems;
     private static JLabel dollarpersecond;
     private static JLabel payoutperiod;
+    public static JLabel nextupgradedollar;
+    public static JLabel nextupgradems;
     Game_Window(){
         Bank bank = new Bank();
         Factory1 factory1 = new Factory1();
-
+        //nextupgradedollar
+        ///////////////////////////////////////////////////////////////
+        nextupgradedollar = new JLabel("Next upgrade: $10");
+        nextupgradedollar.setBounds(10,70,800,25);
+        ///////////////////////////////////////////////////////////////
         //balance
         ///////////////////////////////////////////////////////////////
         balance = new JLabel("Balance:"  + bank.getMoney());
@@ -25,17 +32,22 @@ private static JLabel balance;
         //dollarpersecond
         ///////////////////////////////////////////////////////////////
         dollarpersecond = new JLabel("$ per payout period:"+ factory1.getMoneyearned());
-        dollarpersecond.setBounds(565,100,800,25);
+        dollarpersecond.setBounds(565,110,800,25);
         ///////////////////////////////////////////////////////////////
         //payoutperiod
         ///////////////////////////////////////////////////////////////
         payoutperiod = new JLabel("Payout period:" + factory1.getPeriod() + "ms");
-        payoutperiod.setBounds(565,150,800,25);
+        payoutperiod.setBounds(565,160,800,25);
         ///////////////////////////////////////////////////////////////
         //labelforupgradedollar
         ///////////////////////////////////////////////////////////////
         labelforupgradedollar = new JLabel("");
         labelforupgradedollar.setBounds(170,100,1500,45);
+        ///////////////////////////////////////////////////////////////
+        //labelforupgradems
+        ///////////////////////////////////////////////////////////////
+        labelforupgradems = new JLabel("");
+        labelforupgradems.setBounds(220,150,1500,45);
         ///////////////////////////////////////////////////////////////
         //upgradedollar
         ///////////////////////////////////////////////////////////////
@@ -51,16 +63,25 @@ private static JLabel balance;
         upgradems.addActionListener(new upgrademsActionListener());
         upgradems.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         ///////////////////////////////////////////////////////////////
+        //nextupgradems
+        ///////////////////////////////////////////////////////////////
+        nextupgradems = new JLabel("Next upgrade: $10");
+        nextupgradems.setBounds(10,200,800,25);
+        ///////////////////////////////////////////////////////////////
         //Font
         ///////////////////////////////////////////////////////////////
         balance.setFont(new Font(null,Font.BOLD,20));
         labelforupgradedollar.setFont(new Font(null,Font.BOLD,15));
         payoutperiod.setFont(new Font(null,Font.BOLD,15));
         dollarpersecond.setFont(new Font(null,Font.BOLD,15));
-
+        nextupgradedollar.setFont((new Font(null,Font.BOLD,15)));
+        nextupgradems.setFont(new Font(null,Font.BOLD,15));
         ///////////////////////////////////////////////////////////////
         //panel
         ///////////////////////////////////////////////////////////////
+        panel.add(nextupgradems);
+        panel.add(nextupgradedollar);
+        panel.add(labelforupgradems);
         panel.add(upgradedollar);
         panel.add(balance);
         panel.add(upgradems);

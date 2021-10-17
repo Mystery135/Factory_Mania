@@ -21,6 +21,7 @@ public class upgradedollarActionListener implements ActionListener {
             System.out.println("Upgraded! You now make $" + factory1.getMoneyearned() + " per second!");
             Game_Window.labelforupgradedollar.setText("Upgraded! You now make $" + factory1.getMoneyearned() + " per second!");
             notenoughmoney = 1;
+            Game_Window.nextupgradedollar.setText("Next Upgrade:$" + factory1.getMoneyearned()*10);
 
         }else {
 

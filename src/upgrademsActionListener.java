@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class upgrademsActionListener implements ActionListener {
     Bank bank = new Bank();
@@ -8,6 +10,7 @@ public class upgrademsActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if(bank.getMoney() >= 1010 - factory1.getPeriod()) {
 
             if (factory1.getPeriod() > 0 ){
@@ -34,4 +37,7 @@ public class upgrademsActionListener implements ActionListener {
 
 
     }
+
+
+
 }

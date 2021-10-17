@@ -7,17 +7,30 @@ public class Game_Window {
 
     JFrame frame = new JFrame("Factory Mania");
     JPanel panel = new JPanel();
-     static JLabel labelforupgradedollar;
+     public static JLabel labelforupgradedollar;
 private static JLabel balance;
     private static JButton upgradedollar;
     private static JButton upgradems;
+    private static JLabel dollarpersecond;
+    private static JLabel payoutperiod;
     Game_Window(){
         Bank bank = new Bank();
+        Factory1 factory1 = new Factory1();
 
         //balance
         ///////////////////////////////////////////////////////////////
         balance = new JLabel("Balance:"  + bank.getMoney());
         balance.setBounds(365,20,800,25);
+        ///////////////////////////////////////////////////////////////
+        //dollarpersecond
+        ///////////////////////////////////////////////////////////////
+        dollarpersecond = new JLabel("$ per second:"+ factory1.getMoneyearned());
+        dollarpersecond.setBounds(565,100,800,25);
+        ///////////////////////////////////////////////////////////////
+        //payoutperiod
+        ///////////////////////////////////////////////////////////////
+        payoutperiod = new JLabel("Payout period:" + factory1.getPeriod());
+        payoutperiod.setBounds(565,150,800,25);
         ///////////////////////////////////////////////////////////////
         //labelforupgradedollar
         ///////////////////////////////////////////////////////////////
@@ -42,6 +55,9 @@ private static JLabel balance;
         ///////////////////////////////////////////////////////////////
         balance.setFont(new Font(null,Font.BOLD,20));
         labelforupgradedollar.setFont(new Font(null,Font.BOLD,15));
+        payoutperiod.setFont(new Font(null,Font.BOLD,15));
+        dollarpersecond.setFont(new Font(null,Font.BOLD,15));
+
         ///////////////////////////////////////////////////////////////
         //panel
         ///////////////////////////////////////////////////////////////
@@ -49,6 +65,8 @@ private static JLabel balance;
         panel.add(balance);
         panel.add(upgradems);
         panel.add(labelforupgradedollar);
+        panel.add(payoutperiod);
+        panel.add(dollarpersecond);
         panel.setLayout(null);
         ///////////////////////////////////////////////////////////////
         //frame

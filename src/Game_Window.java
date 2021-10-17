@@ -29,12 +29,12 @@ private static JLabel balance;
         ///////////////////////////////////////////////////////////////
         //payoutperiod
         ///////////////////////////////////////////////////////////////
-        payoutperiod = new JLabel("Payout period:" + factory1.getPeriod());
+        payoutperiod = new JLabel("Payout period:" + factory1.getPeriod() + "ms");
         payoutperiod.setBounds(565,150,800,25);
         ///////////////////////////////////////////////////////////////
         //labelforupgradedollar
         ///////////////////////////////////////////////////////////////
-        labelforupgradedollar = new JLabel("test");
+        labelforupgradedollar = new JLabel("");
         labelforupgradedollar.setBounds(170,100,1500,45);
         ///////////////////////////////////////////////////////////////
         //upgradedollar
@@ -100,6 +100,17 @@ Timer timer = new java.util.Timer();
             @Override
             public void run() {
 balance.setText("Balance:" + (int)bank.getMoney() );
+dollarpersecond.setText("$ per second:"+ factory1.getMoneyearned());
+if (factory1.getPeriod()>0){
+
+    payoutperiod.setText("Payout period:" + factory1.getPeriod() + "ms");
+
+
+}else {
+    payoutperiod.setText("Payout period: maxed! (" + factory1.getPeriod() + "ms)");
+
+
+}
 
 
 

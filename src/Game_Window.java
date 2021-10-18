@@ -16,9 +16,25 @@ private static JLabel balance;
     private static JLabel payoutperiod;
     public static JLabel nextupgradedollar;
     public static JLabel nextupgradems;
+    public static ImageIcon         factory = new ImageIcon("factory.png");
+
+    public static JLabel FactoryLabel;
     Game_Window(){
         Bank bank = new Bank();
         Factory1 factory1 = new Factory1();
+        Image factoryimage = factory.getImage();
+        Image scaledfactoryimage = factoryimage.getScaledInstance(800,600, Image.SCALE_SMOOTH);
+
+        //factoryimageicon
+        ///////////////////////////////////////////////////////////////
+        factory = new ImageIcon(scaledfactoryimage);
+        ///////////////////////////////////////////////////////////////
+        //FactoryLabel
+        ///////////////////////////////////////////////////////////////
+        FactoryLabel = new JLabel(factory);
+        FactoryLabel.setBounds(100,70,600,800);
+
+        ///////////////////////////////////////////////////////////////
         //nextupgradedollar
         ///////////////////////////////////////////////////////////////
         nextupgradedollar = new JLabel("Next upgrade: $10");
@@ -79,6 +95,7 @@ private static JLabel balance;
         ///////////////////////////////////////////////////////////////
         //panel
         ///////////////////////////////////////////////////////////////
+        panel.add(FactoryLabel);
         panel.add(nextupgradems);
         panel.add(nextupgradedollar);
         panel.add(labelforupgradems);
@@ -96,6 +113,9 @@ private static JLabel balance;
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
+
+        frame.setLocationRelativeTo(null);
+
         ///////////////////////////////////////////////////////////////
 
 

@@ -80,7 +80,7 @@ factory1.setPeriod(factory1.getPeriod()-50);
 System.out.println("Payout period is now " + factory1.getPeriod() + " milliseconds from " + (factory1.getPeriod() +50) + " milliseconds");
 bank.setMoney(bank.getMoney() - (factory1.getPeriodPrice()));
 System.out.println("Your balance is now " + bank.getMoney());
-                    factory1.setPeriodPrice((int) (factory1.getPeriodPrice()*1.4));
+                    factory1.setPeriodPrice((int) (factory1.getPeriodPrice()*2));
 
                 }
 

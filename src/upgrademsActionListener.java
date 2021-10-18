@@ -22,7 +22,7 @@ public class upgrademsActionListener implements ActionListener {
                 bank.setMoney(bank.getMoney() - (factory1.getPeriodPrice()));
                 System.out.println("Your balance is now " + bank.getMoney());
 
-                factory1.setPeriodPrice((int) (factory1.getPeriodPrice() * 1.4));
+                factory1.setPeriodPrice((int) (factory1.getPeriodPrice() * 2));
                 Game_Window.nextupgradems.setText("Next upgrade:$" + factory1.getPeriodPrice());
 
             } else {

@@ -16,14 +16,14 @@ private static JLabel balance;
     private static JLabel payoutperiod;
     public static JLabel nextupgradedollar;
     public static JLabel nextupgradems;
-    public static ImageIcon         factory = new ImageIcon("factory.png");
+    private static ImageIcon factory = new ImageIcon("factory1.png");
 
     public static JLabel FactoryLabel;
     Game_Window(){
         Bank bank = new Bank();
         Factory1 factory1 = new Factory1();
         Image factoryimage = factory.getImage();
-        Image scaledfactoryimage = factoryimage.getScaledInstance(800,600, Image.SCALE_SMOOTH);
+        Image scaledfactoryimage = factoryimage.getScaledInstance(800,450, Image.SCALE_SMOOTH);
 
         //factoryimageicon
         ///////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@ private static JLabel balance;
         //FactoryLabel
         ///////////////////////////////////////////////////////////////
         FactoryLabel = new JLabel(factory);
-        FactoryLabel.setBounds(100,70,600,800);
+        FactoryLabel.setBounds(-110,5,1000,800);
 
         ///////////////////////////////////////////////////////////////
         //nextupgradedollar
@@ -43,7 +43,7 @@ private static JLabel balance;
         //balance
         ///////////////////////////////////////////////////////////////
         balance = new JLabel("Balance:"  + bank.getMoney());
-        balance.setBounds(365,20,800,25);
+        balance.setBounds(365,30,800,25);
         ///////////////////////////////////////////////////////////////
         //dollarpersecond
         ///////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@ private static JLabel balance;
         ///////////////////////////////////////////////////////////////
         //panel
         ///////////////////////////////////////////////////////////////
-        panel.add(FactoryLabel);
+
         panel.add(nextupgradems);
         panel.add(nextupgradedollar);
         panel.add(labelforupgradems);
@@ -105,6 +105,7 @@ private static JLabel balance;
         panel.add(labelforupgradedollar);
         panel.add(payoutperiod);
         panel.add(dollarpersecond);
+        panel.add(FactoryLabel);
         panel.setLayout(null);
         ///////////////////////////////////////////////////////////////
         //frame
@@ -113,7 +114,6 @@ private static JLabel balance;
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
-
         frame.setLocationRelativeTo(null);
 
         ///////////////////////////////////////////////////////////////

@@ -16,7 +16,7 @@ private static JLabel balance;
     private static JLabel payoutperiod;
     public static JLabel nextupgradedollar;
     public static JLabel nextupgradems;
-    private static ImageIcon factory = new ImageIcon("factory1.png");
+    private static ImageIcon factory = new ImageIcon("src//images//factory1.png");
 
     public static JLabel FactoryLabel;
     Game_Window(){

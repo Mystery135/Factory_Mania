@@ -10,9 +10,13 @@ public class Launcher {
 public static JButton start;
    public JFrame launcherFrame;
     public JPanel launcherPanel;
-    private static ImageIcon mountain = new ImageIcon("mountain.jpg");
+//    private static ImageIcon mountain = new ImageIcon("mountain.jpg");
+    private ImageIcon mountain = new ImageIcon(getClass().getClassLoader().getResource("mountain.jpg"));
     private static JLabel mountainLabel;
-   public Launcher(){
+    private JCheckBox checkBox1;
+    private JPanel panel1;
+
+    public Launcher(){
        launcherPanel = new JPanel();
 
        launcherFrame = new JFrame("Factory Mania Launcher");
